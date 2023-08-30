@@ -41,17 +41,6 @@ int main(void)
 		printf("Choose X or O: \n");
 		scanf(" %c", &playerToken);
 		
-		//Scan check
-		while(playerToken != 'x' || playerToken != 'X' || playerToken != 'o' || playerToken != 'O')
-		{
-			printf("Try again: Choose X or O: \n");
-			scanf(" %c", &playerToken);
-				if(playerToken == 'x' || playerToken == 'X' || playerToken == 'o' || playerToken == 'O')
-				{
-					break;
-				}
-		}
-		
 		while(playerToken != 'x' || playerToken != 'o' || playerToken != 'X' || playerToken != 'O'){
 			if(playerToken != 'x' || playerToken != 'o' || playerToken != 'X' || playerToken != 'O'){
 				break;
