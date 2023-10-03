@@ -69,11 +69,23 @@ int main(void)
 				////////////////////////////////////// player turn /////////////////////////////
 				printf("Your Turn:\n");
 				printf("Enter Position: ");
-				scanf("%d", &position);
 				
-				while(position > 9 || position < 1){
-					printf("invalid input - try again\n");
-					scanf("%d", &position);
+				while (1){
+					int result = scanf("%d", &position);
+					if (result == 1){
+					// Input was successfully converted to an integer
+						if (position >= 1 && position <= 9){
+							break; // Valid input
+						}
+						else{
+						printf("Invalid input - input must be between 1 and 9. Try again: ");
+						}
+					}
+					else {
+						// Clear the input buffer
+						while (getchar() != '\n');
+						printf("Invalid input - not an integer. Try again: ");
+					}
 				}	
 					
 				while(potracker[position] == true){
@@ -119,12 +131,25 @@ int main(void)
 			
 				printf("Your Turn:\n");
 				printf("Enter Position: ");
-				scanf("%d", &position);
 				
-				while(position > 9 || position < 1){
-					printf("invalid input - try again\n");
-					scanf("%d", &position);
-				}
+								while (1){
+					int result = scanf("%d", &position);
+					if (result == 1){
+					// Input was successfully converted to an integer
+						if (position >= 1 && position <= 9){
+							break; // Valid input
+						}
+						else{
+						printf("Invalid input - input must be between 1 and 9. Try again: ");
+						}
+					}
+					else {
+						// Clear the input buffer
+						while (getchar() != '\n');
+						printf("Invalid input - not an integer. Try again: ");
+					}
+				}	
+
 				
 				while(potracker[position] == true){
 					position = 0;
